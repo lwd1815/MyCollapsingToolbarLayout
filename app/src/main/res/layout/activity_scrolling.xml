@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:fitsSystemWindows="true"
+		>
+
+	<android.support.design.widget.AppBarLayout
+			android:id="@+id/app_bar"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/apps_bar_height"
+			android:fitsSystemWindows="true"
+			android:theme="@style/AppTheme.AppBarOverlay">
+
+		<android.support.design.widget.CollapsingToolbarLayout
+				android:id="@+id/toolbar_layout"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:fitsSystemWindows="true"
+				app:contentScrim="?attr/colorPrimary"
+				app:layout_scrollFlags="scroll|exitUntilCollapsed">
+			<!--<ImageView android:layout_width="match_parent" android:layout_height="@dimen/app_bar_height"-->
+					<!--android:background="@mipmap/ic_launcher" app:layout_collapseMode="parallax"-->
+					<!--app:layout_collapseParallaxMultiplier="0.7"/>-->
+
+			<android.support.v7.widget.Toolbar
+					android:id="@+id/toolbar"
+					android:layout_width="match_parent"
+					android:layout_height="?attr/actionBarSize"
+					app:layout_collapseMode="pin"
+			>
+				<TextView
+						android:id="@+id/tv_img"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="left|center_vertical"
+						android:layout_marginLeft="15dp"
+						android:background="#85db4b"
+						android:gravity="center"
+						android:padding="3dp"
+						android:text="图片"
+						android:textColor="@android:color/white"
+				/>
+				<TextView
+
+						android:id="@+id/tv_msg"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="right|center_vertical"
+						android:layout_marginRight="15dp"
+						android:background="#ec3c74"
+						android:gravity="center"
+						android:padding="3dp"
+						android:text="消息"
+						android:textColor="@android:color/white"
+				/>
+
+			</android.support.v7.widget.Toolbar>
+			<TextView
+					android:id="@+id/tv_title"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:gravity="center"
+					android:padding="3dp"
+					android:text="大鱼优品"
+					android:textColor="@android:color/white"
+					android:textSize="24sp"
+			/>
+			<RelativeLayout
+					android:id="@+id/rl_search"
+					android:layout_marginLeft="10dp"
+					android:layout_marginRight="10dp"
+					android:layout_gravity="bottom"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+				<TextView
+						android:maxLines="1"
+						android:ellipsize="end"
+						android:gravity="center_vertical"
+						android:textColor="@color/colorPrimaryDark"
+						android:paddingLeft="20dp"
+						android:paddingRight="20dp"
+						android:text="写给你的歌 刘明汉 网易云音乐 曾经看过一个街头采访"
+						android:layout_marginBottom="3dp"
+						android:layout_width="match_parent"
+						android:layout_height="36dp"
+						android:background="@drawable/ele_search_bg"
+						/>
+				<!--<TextView-->
+						<!--android:layout_alignParentLeft="true"-->
+						<!--android:layout_centerVertical="true"-->
+						<!--android:layout_width="wrap_content"-->
+						<!--android:layout_height="wrap_content"-->
+						<!--android:layout_marginLeft="10dp"-->
+						<!--android:background="#85db4b"-->
+						<!--android:gravity="center"-->
+						<!--android:padding="3dp"-->
+						<!--android:text="文字"-->
+						<!--android:textColor="@android:color/white"-->
+				<!--/>-->
+				<!--<TextView-->
+						<!--android:layout_alignParentRight="true"-->
+						<!--android:layout_centerVertical="true"-->
+						<!--android:layout_width="wrap_content"-->
+						<!--android:layout_height="wrap_content"-->
+						<!--android:layout_marginRight="10dp"-->
+						<!--android:background="#85db4b"-->
+						<!--android:gravity="center"-->
+						<!--android:padding="3dp"-->
+						<!--android:text="语音"-->
+						<!--android:textColor="@android:color/white"-->
+				<!--/>-->
+			</RelativeLayout>
+
+
+
+
+		</android.support.design.widget.CollapsingToolbarLayout>
+	</android.support.design.widget.AppBarLayout>
+
+	<include layout="@layout/content_scrolling"/>
+
+	<android.support.design.widget.FloatingActionButton
+			android:id="@+id/fab"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="@dimen/fab_margin"
+			app:layout_anchor="@id/app_bar"
+			app:layout_anchorGravity="bottom|end"
+			app:srcCompat="@android:drawable/ic_dialog_email"/>
+
+</android.support.design.widget.CoordinatorLayout>

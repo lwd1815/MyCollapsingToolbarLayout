@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="com.m520it.myapplication.TestScrollActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:fitsSystemWindows="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_bar_height"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:fitsSystemWindows="true"
+                android:layout_height="match_parent"
+                app:statusBarScrim="@android:color/transparent"
+                app:contentScrim="@android:color/transparent"
+                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+                <!--<ImageView-->
+                <!--android:id="@+id/image"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--app:layout_collapseMode="none"-->
+                <!--android:src="@mipmap/test"-->
+                <!--android:scaleType="centerCrop"/>-->
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tool_bar_height"
+                    app:contentInsetStart="0dp"
+                    android:background="#ff0000"
+                    app:layout_collapseMode="pin"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/tv_img"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/test"
+                        android:scaleType="centerCrop"
+                        android:layout_marginLeft="5dp"
+                        android:layout_alignParentLeft="true"
+                        />
+                    <TextView
+
+                        android:id="@+id/tv_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="5dp"
+                        android:background="#ec3c74"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentRight="true"
+                        android:text="消息"
+                        android:textColor="@android:color/white"
+                        />
+                    </RelativeLayout>
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <include layout="@layout/content_test_scroll" />
+
+
+
+    </android.support.design.widget.CoordinatorLayout>
+    <!-- 搜索框布局-->
+    <RelativeLayout
+        android:id="@+id/ll"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/app_bar"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        app:layout_anchorGravity="bottom">
+        <TextView
+            android:id="@+id/bac"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            />
+        <EditText
+            android:id="@+id/fab"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/fab_margin"
+            android:focusable="false"
+            android:background="@drawable/et_bac"
+            />
+    </RelativeLayout>
+
+
+
+</FrameLayout>

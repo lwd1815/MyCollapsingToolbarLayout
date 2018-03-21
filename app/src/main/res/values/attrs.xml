@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="MsgView">
+		<!-- 圆角矩形背景色 -->
+		<attr name="mv_backgroundColor" format="color"/>
+		<!-- 圆角弧度,单位dp-->
+		<attr name="mv_cornerRadius" format="dimension"/>
+		<!-- 圆角弧度,单位dp-->
+		<attr name="mv_strokeWidth" format="dimension"/>
+		<!-- 圆角边框颜色-->
+		<attr name="mv_strokeColor" format="color"/>
+		<!-- 圆角弧度是高度一半-->
+		<attr name="mv_isRadiusHalfHeight" format="boolean"/>
+		<!-- 圆角矩形宽高相等,取较宽高中大值-->
+		<attr name="mv_isWidthHeightEqual" format="boolean"/>
+	</declare-styleable>
+
+	<declare-styleable name="MyCircle">
+		<attr name="circle_color"  format="color"/>
+		<attr name="circle_innerWidth" format="dimension"/>
+		<attr name="circle_width" format="dimension"/>
+	</declare-styleable>
+
+	<declare-styleable name="MyRectCircleEditText">
+		<attr name="text_size" format="float"/>
+		<attr name="speed" format="float"/>
+		<attr name="bac_color" format="color"/>
+		<attr name="text_color" format="color"/>
+		<attr name="inner_circle_color" format="color"/>
+		<attr name="text" format="string"/>
+		<attr name="open_icon" format="reference"/>
+		<attr name="close_icon" format="reference"/>
+	</declare-styleable>
+
+	<declare-styleable name="CircleImageview">
+		<attr format="color" name="borderColor" />
+		<attr format="dimension" name="borderWidth" />
+		<attr format="dimension" name="borderWiderWidth" />
+	</declare-styleable>
+
+	<attr format="dimension" name="borderRadius" />
+	<attr name="imageType">
+		<enum name="circle" value="0" />
+		<enum name="round" value="1" />
+	</attr>
+	<declare-styleable name="RoundImageView">
+		<attr name="borderRadius" />
+		<attr name="imageType" />
+	</declare-styleable>
+	<declare-styleable name="XfermodeRoundImageView">
+		<attr name="borderRadius" />
+		<attr name="imageType" />
+	</declare-styleable>
+	<declare-styleable name="RatioImageView">
+		<attr format="float" name="ratio" />
+	</declare-styleable>
+
+	<!-- 申请进度的自定义view-->
+	<declare-styleable name="AuditProgressView">
+		<!--当前步骤是否完成 -->
+		<attr name="apv_isCurrentComplete" format="boolean" />
+		<!--下一个步骤是否完成 -->
+		<attr name="apv_isNextComplete" format="boolean" />
+		<!--是不是第一个步骤 -->
+		<attr name="apv_isFirstStep" format="boolean" />
+		<!--是不是最后一个步骤 -->
+		<attr name="apv_isLastStep" format="boolean" />
+		<!--共有几个步骤 -->
+		<attr name="apv_stepCount" format="integer" />
+		<!--步骤提示 -->
+		<attr name="apv_text" format="string|reference" />
+	</declare-styleable>
+
+	<declare-styleable name="FocusImageView">
+		<attr name="focus_focusing_id" format="integer" />
+		<attr name="focus_success_id" format="integer" />
+		<attr name="focus_fail_id" format="integer" />
+	</declare-styleable>
+</resources>
